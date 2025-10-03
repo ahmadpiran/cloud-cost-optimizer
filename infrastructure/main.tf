@@ -31,3 +31,10 @@ resource "aws_s3_bucket_lifecycle_configuration" "data_exports_bucket_lifecycle"
         }
     }
 }
+
+
+# Athena DB for AWS Data Exports
+resource "aws_athena_database" "data_exports_db" {
+  name  = "cloud_cost_optimizer_data_exports_db"
+  bucket = aws_s3_bucket.data_exports_bucket.bucket
+}
