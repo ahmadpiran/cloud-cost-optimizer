@@ -1,5 +1,5 @@
 provider "aws" {
-  region = us-east-1
+  region = "us-east-1"
 }
 
 # S3 Bucket for AWS Data Exports
